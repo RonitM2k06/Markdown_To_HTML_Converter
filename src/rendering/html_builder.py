@@ -76,7 +76,19 @@ TEMPLATE_STR = """<!DOCTYPE html>
     <!-- Mermaid JS for diagrams -->
     <script type="module">
         import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-        mermaid.initialize({ startOnLoad: true, theme: '{{ "dark" if theme == "dark" else "default" }}' });
+        mermaid.initialize({ startOnLoad: false, theme: '{{ "dark" if theme == "dark" else "default" }}' });
+        
+        document.addEventListener("DOMContentLoaded", async () => {
+            const nodes = document.querySelectorAll("code.language-mermaid");
+            nodes.forEach(node => {
+                const pre = node.parentElement;
+                pre.classList.add("mermaid");
+                pre.textContent = node.textContent;
+            });
+            await mermaid.run({
+                nodes: document.querySelectorAll('.mermaid')
+            });
+        });
     </script>
 </body>
 </html>"""
