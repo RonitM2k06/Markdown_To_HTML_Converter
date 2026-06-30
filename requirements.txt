@@ -1,0 +1,13 @@
+PySide6
+markdown-it-py
+Pygments
+beautifulsoup4
+Jinja2
+watchdog
+pytest
+black
+ruff
+mypy
+rich
+loguru
+mdit-py-plugins

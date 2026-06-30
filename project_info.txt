@@ -1,0 +1,62 @@
+RANK: 78
+ORIGINAL ID: 78
+DIFFICULTY: Intermediate
+CATEGORY: Text Processing
+TAGLINE: Basic text parser converting markdown subsets to HTML.
+
+======================================================================
+## Project 78 — MarkdownToHtml
+
+**Tagline:** Basic text parser converting markdown subsets to HTML.
+
+**Category:** Text Processing
+
+### Problem Statement
+Parsing text into a structured format requires understanding regular expressions and state machines.
+
+### Detailed Description
+This tool reads a Markdown file (.md) and converts basic elements (headers, bold, italics, lists, links) into a valid HTML document. It uses regular expressions and a line-by-line parsing strategy to recognize markdown tokens and wrap them in the corresponding HTML tags, finally saving the output to an .html file.
+
+### Core Features
+- Parse Headers (# to <h6>)
+- Parse bold/italics (** and *)
+- Parse unordered lists
+- Generate valid HTML boilerplate
+- Output to file
+
+### Technical Challenges
+- Handling nested markdown (e.g., bold inside a list)
+- Escaping HTML characters to prevent injection
+- Managing parser state across multiple lines
+
+### Suggested Tech Stack
+- Java 21
+- java.util.regex
+- java.nio.file
+
+### Recommended Architecture
+[Markdown Reader] -> [Regex Parser] -> [HTML Generator] -> [Output File]
+
+### Java Concepts Demonstrated
+- Regular Expressions (Regex)
+- File I/O
+- State Machines
+- String Manipulation
+
+**Difficulty:** Intermediate  
+**Resume Value:** ★★★☆☆  
+**GitHub Portfolio Value:** ★★★☆☆  
+**Research Potential:** Low  
+**Startup Potential:** ★★☆☆☆  
+**Open Source Potential:** ★★☆☆☆  
+**Learning Value:** ★★★★★
+
+### Company Alignment
+| Company | Score | Reason |
+|---|---|---|
+| CMS Providers | 7 | Text parsing is core to CMS |
+| EdTech | 6 | Content generation tools |
+| Publishing | 6 | Document conversion |
+
+---
+======================================================================
